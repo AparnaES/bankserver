@@ -1,0 +1,123 @@
+Server creation
+---------------
+->npm init
+->install express  - npm i express
+->
+(nodemodules will store copy of all files project and use npm init command form get this file for other devices.)
+(what ever want need to install whre ever wants it import it)
+steps
+-----
+1 - import express  -require(id in pkgjson)
+2 - create app using express -
+3 - set port to run app(3000 series) -listen()
+
+*install nodemon
+nodemon- for recompliation of node
+local installes   ->npx nodemon index.js
+
+status()-change the statuscode of response
+json()-convert js to json and send 
+use()-json to js 
+
+token generation
+token for login user or authorized user
+
+token is JWT(json web token)
+        --------------------
+  -used for user authentication
+  -Jsonwebtoken- library to generate tokens.
+  -sign() -method used to create/generate token
+  -verify()-method to verify token
+
+token verification
+------------------
+
+  -middlewares
+  ------------
+   -its a function with 3 arguments (req,res,next)
+   -it have a capacity to control http requests in node.
+   -there are two types of middle wares
+      -application specific middlewares.
+            -it happens before all the https methods
+             -create middlewares
+             -call after creationof app. callby use() method
+      -router specific middlewares.
+            -can apply only to the specific requests.
+            -call after path
+  next()-method used inside middlewaresto continue mode of execution, Server to exiting from middlewares 
+
+
+
+  Mongodb
+  -------
+  commands
+  ------
+1- to see the database
+
+    -show dbs
+
+2- to  open a dbs
+
+   -use(databasename)
+
+3- to list collections
+
+    -show collections
+
+4- to show the datas inside a collection
+
+    -db.(collectionname).find()
+
+5-to show single data inside a collection
+
+    -db.(collectionname).findOne({key:value})
+
+    eg:
+    db.users.findOne({acno:1000})    -present   -full data of the object
+                                    -not present -null
+
+6-insert new data
+     
+     -db.(collectionname).insertOne({key:value})
+
+7-to find data using a particular condition
+   
+    -db.(collectionname).find({condition})           
+             
+             ->condition:create using query selector operators
+
+              -to access datas which is above 4000
+               db.user.find({balance:{gt:4000}})
+
+8-delete a data form a collection
+     
+     -db.(collectionname).deleteOne({key:value})           - deletecount=0 (not deleted)
+
+9-update
+      
+      - db.(collectionname).updateOne({oldkey:oldvalue},{$set:{newkey:newvalue}})
+      eg:
+      - db.users.updateOne({username:anu},($set:{username:anu v}))
+
+
+
+
+DB server intagration (mdb node connection)(27017 - 3000)
+-------------------------------------------
+
+mongoose  - library used to integrate Mongodb and server.
+           - npm i mongoose
+
+connect() - method used to create connection string.
+
+model()  - method used to create model.
+
+
+
+steps
+-----
+
+1->import mongoose
+2->connection string creation
+3->model creation for collection inside database (model name is singular form of collectionname, user)
+4
