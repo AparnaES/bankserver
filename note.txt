@@ -120,4 +120,17 @@ steps
 1->import mongoose
 2->connection string creation
 3->model creation for collection inside database (model name is singular form of collectionname, user)
-4
+
+
+Asynchornous methods handling in js
+-----------------------------------
+
+promise  - resolve       then()
+reject   - reject        catch()
+
+
+Node and Angular intergration
+-----------------------------
+ -> CORS (cross origin resources sharing )   -libaray used to integrate frondend with node
+    4200-3000
+integerate after app creation
